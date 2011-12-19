@@ -24,7 +24,7 @@
  * THE SOFTWARE. 
  */ 
  
- function indefinite_article(phrase) {
+ window.indefiniteArticle = function(phrase) {
         
     // Getting the first word 
     var match = /\w+/.exec(phrase);

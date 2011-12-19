@@ -4,11 +4,12 @@ function test_indefinite_article() {
 	
 	for (var i in test_words) {
 		var w = test_words[i];
-		if (indefinite_article(w) != matches[i]) {
-			console.log("FAIL: Word: " + w + " doesn't match! '"+ matches[i] + "' != '" + indefinite_article(w) + "'");
+		var ia = window.indefiniteArticle(w);
+		if (ia != matches[i]) {
+			return "FAIL: Word: " + w + " doesn't match! '"+ matches[i] + "' != '" + ia + "'";
 			return;
 		}
 	}
 	
-	console.log("Test Passes!");
+	return "Test Passes!";
 }
